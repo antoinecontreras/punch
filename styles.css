@@ -1,0 +1,160 @@
+@font-face {
+	font-family: druks;
+	src: url(Druk-Wide-Medium.woff);
+}
+
+@font-face {
+	font-family: NeueHaas;
+	src: url(NeueHaas.woff);
+}
+html {
+	scroll-behavior: smooth;
+  }
+body {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: druks;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.main {
+	width: 100%;
+	height: 100svh;
+}
+.carousel {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+.carousel-cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	counter-increment: carousel-cell;
+}
+.carousel-logo {
+	display: flex;
+	position: absolute;
+	top: 0;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100svh;
+	pointer-events: none;
+	z-index: 1;
+}
+.carousel-logo img {
+	width: 50%;
+}
+.flickity-prev-next-button.next {
+	right: 0;
+}
+.flickity-prev-next-button.previous:hover {
+	cursor: w-resize;
+}
+.flickity-prev-next-button.next:hover {
+	cursor: e-resize;
+}
+.flickity-prev-next-button.previous {
+	left: 0;
+}
+.flickity-button:hover {
+	background: none;
+}
+.flickity-prev-next-button .flickity-button-icon {
+	display: none;
+}
+.flickity-prev-next-button {
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 0;
+	background: none;
+	width: 50%;
+	height: 100%;
+}
+.socials {
+	display: flex;
+	position: fixed;
+
+	bottom: 2.5%;
+	justify-content: center;
+	width: 100%;
+	font-size: 60%;
+}
+.socials a {
+	color: black;
+	z-index: 0;
+}
+.socials.white{
+	position: sticky;
+    z-index: 10;
+
+}
+.socials.white a{
+
+	color: var(--main--color);
+}
+.socials a+a {
+	margin-left: 2.5%;
+}
+.title {
+	width: 100%;
+	color: var(--main--color);
+	font-size: 100%;
+}
+.title>* {
+	z-index: 10;
+	padding-top: 2.5%;
+}
+.title p {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 0;
+	width: auto;
+}
+.title a {
+	position: absolute;
+	right: 5%;
+	color: var(--main--color);
+}
+.page-contact {
+    display: flex;
+    padding: 0% 5%;
+    height: 100vh;
+    font-size: 3vw;
+    flex-direction: column;
+}
+.page-contact div {
+margin-top: 5%;
+}
+.page-contact p {
+	margin: 0;
+}
+.page-contact a {
+	color: black;
+}
+@media (orientation: portrait) {
+	.flickity-prev-next-button {
+		display: none;
+	}
+	.title p {
+		left: 2.5%;
+		transform: translate(0);
+	}
+	.title a {
+		right: 2.5%;
+	}
+  }
+:root {
+	--main--color: white;
+}
