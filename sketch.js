@@ -18,8 +18,8 @@ function setup() {
 	noStroke();
 
   if(checkMobile()){
-    freq = map(300, 0, width, 0, 27.0);
-		amp = map(300, 0, height, 0, 0.07);
+    freq = map(100, 0, width, 0, 27.0);
+		amp = map(100, 0, height, 0, 0.07);
   }else{
     animation=true;
   }
