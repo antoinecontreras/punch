@@ -5,7 +5,6 @@ function preload() {
   myShader = loadShader('shader/shader.vert', 'shader/shader.frag');
 }
 const target = document.querySelector("#canvas-container");
-console.log(target, target.offsetWidth);
 function setup() {
   let myCanvas = createCanvas(target.offsetWidth, target.offsetHeight, WEBGL);
   myCanvas.parent("canvas-container");
