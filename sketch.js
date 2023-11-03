@@ -1,6 +1,6 @@
 let myShader;
 let img;
-
+console.log("ANTOINE CONTRERAS DEVELOPPEMENT WITH DIPLOMATIE STUDIO ");
 function preload() {
   myShader = loadShader('shader/shader.vert', 'shader/shader.frag');
 }

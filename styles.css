@@ -41,6 +41,11 @@ a:hover {
 	overflow: hidden;
 	counter-increment: carousel-cell;
 }
+.carousel-cell img{
+	height: 100%;
+    width: 100%;
+	object-fit: cover;
+}
 .carousel-logo {
 	display: flex;
 	position: absolute;
