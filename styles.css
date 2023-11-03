@@ -52,6 +52,10 @@ a:hover {
 	pointer-events: none;
 	z-index: 1;
 }
+#canvas-container{
+	width: 40vw;
+	height: 40vw;
+}
 .carousel-logo img {
 	width: 50%;
 }
@@ -144,6 +148,10 @@ margin-top: 5%;
 	color: black;
 }
 @media (orientation: portrait) {
+	#canvas-container{
+		width: 60vw;
+		height: 60vw;
+	}
 	.flickity-prev-next-button {
 		display: none;
 	}
