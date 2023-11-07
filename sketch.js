@@ -17,27 +17,21 @@ function setup() {
 	myShader.setUniform("tex", img);
 	noStroke();
 
-  if(checkMobile()){
-    freq = map(150, 0, width, 0, 27.0);
-		amp = map(150, 0, height, 0, 0.07);
-  }else{
-    animation=true;
-  }
-}
-function mouseMoved(){
-  if (animation !== false) {
 
-		freq = map(mouseX, 0, width, 0, 27.0);
-		amp = map(mouseY, 0, height, 0, 0.07);
-	}
 }
+
 function draw() {
 
+	// myShader.setUniform("frequency", freq);
+	// myShader.setUniform("amplitude", amp);
+  if(checkMobile()){
+    myShader.setUniform("time", frameCount * 0.009);
+    myShader.setUniform("time2", frameCount * 0.008);
+  }else{
+    myShader.setUniform("time", frameCount * 0.006);
+    myShader.setUniform("time2", frameCount * 0.005);
+  }
 	
-
-	myShader.setUniform("frequency", freq);
-	myShader.setUniform("amplitude", amp);
-	myShader.setUniform("time", frameCount * 0.008);
 
 	rect(0, 0, width, height);
 }
